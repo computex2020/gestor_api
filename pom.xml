@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.computex</groupId>
-	<artifactId>apigestor</artifactId>
+	<artifactId>gestor_api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>apigestor</name>
+	<name>gestor_api</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
