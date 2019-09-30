@@ -22,27 +22,27 @@ public class TipoTelefoneResource {
 	@Autowired
 	TipoTelefoneRepository tipoTelefoneRepository;
 	
-	@GetMapping("/tipostelefones")
+	@GetMapping("/tipos-telefones")
 	public List<TipoTelefone> listaTipoTelefonees() {
 		return tipoTelefoneRepository.findAll();
 	}
 	
-	@GetMapping("/tipotelefone/{id}")
+	@GetMapping("/tipo-telefone/{id}")
 	public TipoTelefone listaTipoTelefoneUnico(@PathVariable(value="id") long id){
 		return tipoTelefoneRepository.findById(id);
 	}
 	
-	@PostMapping("/tipotelefone")
+	@PostMapping("/tipo-telefone")
 	public TipoTelefone salvaTipoTelefone(@RequestBody TipoTelefone tipoTelefone) {
 		return tipoTelefoneRepository.save(tipoTelefone);
 	}
 	
-	@DeleteMapping("/tipotelefone")
+	@DeleteMapping("/tipo-telefone")
 	public void deletaTipoTelefone(@RequestBody TipoTelefone tipoTelefone) {
 		tipoTelefoneRepository.delete(tipoTelefone);
 	}
 	
-	@PutMapping("/tipotelefone")
+	@PutMapping("/tipo-telefone")
 	public TipoTelefone atualizaTipoTelefone(@RequestBody TipoTelefone tipoTelefone) {
 		return tipoTelefoneRepository.save(tipoTelefone);
 	}

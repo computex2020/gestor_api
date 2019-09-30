@@ -21,22 +21,22 @@ public class PermissaoUsuarioResource {
 	@Autowired
     private PermissaoUsuarioRepository permissaoUsuarioRepository;
 	
-	@GetMapping("/permissoesusuarios")
+	@GetMapping("/permissoes-usuarios")
 	public List<PermissaoUsuario> listaPermissoesUsuarios() {
 		return permissaoUsuarioRepository.findAll();
 	}
 	
-	@PostMapping("/permissaousuario")
+	@PostMapping("/permissao-usuario")
 	public PermissaoUsuario salvaPermissaoUsuario(@RequestBody PermissaoUsuario permissaoUsuario) {
 		return permissaoUsuarioRepository.save(permissaoUsuario);
 	}
 	
-	@DeleteMapping("/permissaousuario")
+	@DeleteMapping("/permissao-usuario")
 	public void deletaPermissaoUsuario(@RequestBody PermissaoUsuario permissaoUsuario) {
 		permissaoUsuarioRepository.delete(permissaoUsuario);
 	}
 	
-	@PutMapping("/permissaousuario")
+	@PutMapping("/permissao-usuario")
 	public PermissaoUsuario atualizaPermissaoUsuario(@RequestBody PermissaoUsuario permissaoUsuario) {
 		return permissaoUsuarioRepository.save(permissaoUsuario);
 	}

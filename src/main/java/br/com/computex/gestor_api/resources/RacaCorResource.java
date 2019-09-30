@@ -22,27 +22,27 @@ public class RacaCorResource {
 	@Autowired
 	RacaCorRepository racaCorRepository;
 	
-	@GetMapping("/racascores")
+	@GetMapping("/racas-cores")
 	public List<RacaCor> listaRacaCores() {
 		return racaCorRepository.findAll();
 	}
 	
-	@GetMapping("/racacor/{id}")
+	@GetMapping("/raca-cor/{id}")
 	public RacaCor listaRacaCorUnica(@PathVariable(value="id") long id){
 		return racaCorRepository.findById(id);
 	}
 	
-	@PostMapping("/racacor")
+	@PostMapping("/raca-cor")
 	public RacaCor salvaRacaCor(@RequestBody RacaCor racaCor) {
 		return racaCorRepository.save(racaCor);
 	}
 	
-	@DeleteMapping("/racacor")
+	@DeleteMapping("/raca-cor")
 	public void deletaRacaCor(@RequestBody RacaCor racaCor) {
 		racaCorRepository.delete(racaCor);
 	}
 	
-	@PutMapping("/racacor")
+	@PutMapping("/raca-cor")
 	public RacaCor atualizaRacaCor(@RequestBody RacaCor racaCor) {
 		return racaCorRepository.save(racaCor);
 	}

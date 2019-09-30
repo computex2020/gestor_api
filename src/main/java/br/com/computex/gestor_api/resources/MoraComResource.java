@@ -22,27 +22,27 @@ public class MoraComResource {
 	@Autowired
 	MoraComRepository moraComRepository;
 	
-	@GetMapping("/morascons")
+	@GetMapping("/moras-com")
 	public List<MoraCom> listaMorasCons() {
 		return moraComRepository.findAll();
 	}
 	
-	@GetMapping("/moracom/{id}")
+	@GetMapping("/mora-com/{id}")
 	public MoraCom listaMoraComUnico(@PathVariable(value="id") long id){
 		return moraComRepository.findById(id);
 	}
 	
-	@PostMapping("/moracom")
+	@PostMapping("/mora-com")
 	public MoraCom salvaMoraCom(@RequestBody MoraCom moraCom) {
 		return moraComRepository.save(moraCom);
 	}
 	
-	@DeleteMapping("/moracom")
+	@DeleteMapping("/mora-com")
 	public void deletaMoraCom(@RequestBody MoraCom moraCom) {
 		moraComRepository.delete(moraCom);
 	}
 	
-	@PutMapping("/moracom")
+	@PutMapping("/mora-com")
 	public MoraCom atualizaMoraCom(@RequestBody MoraCom moraCom) {
 		return moraComRepository.save(moraCom);
 	}

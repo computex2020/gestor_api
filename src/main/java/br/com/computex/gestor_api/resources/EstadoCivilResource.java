@@ -22,27 +22,27 @@ public class EstadoCivilResource {
 	@Autowired
 	EstadoCivilRepository estadoCivilRepository;
 	
-	@GetMapping("/estadoscivis")
+	@GetMapping("/estados-civis")
 	public List<EstadoCivil> listaEstadoCiviles() {
 		return estadoCivilRepository.findAll();
 	}
 	
-	@GetMapping("/estadocivil/{id}")
+	@GetMapping("/estado-civil/{id}")
 	public EstadoCivil listaEstadoCivilUnico(@PathVariable(value="id") long id){
 		return estadoCivilRepository.findById(id);
 	}
 	
-	@PostMapping("/estadocivil")
+	@PostMapping("/estado-civil")
 	public EstadoCivil salvaEstadoCivil(@RequestBody EstadoCivil estadoCivil) {
 		return estadoCivilRepository.save(estadoCivil);
 	}
 	
-	@DeleteMapping("/estadocivil")
+	@DeleteMapping("/estado-civil")
 	public void deletaEstadoCivil(@RequestBody EstadoCivil estadoCivil) {
 		estadoCivilRepository.delete(estadoCivil);
 	}
 	
-	@PutMapping("/estadocivil")
+	@PutMapping("/estado-civil")
 	public EstadoCivil atualizaEstadoCivil(@RequestBody EstadoCivil estadoCivil) {
 		return estadoCivilRepository.save(estadoCivil);
 	}

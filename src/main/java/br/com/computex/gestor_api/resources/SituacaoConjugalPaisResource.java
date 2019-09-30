@@ -22,27 +22,27 @@ public class SituacaoConjugalPaisResource {
 	@Autowired
 	SituacaoConjugalPaisRepository situacaoConjugalPaisRepository;
 	
-	@GetMapping("/situacoesconjugaispais")
+	@GetMapping("/situacoes-conjugais-pais")
 	public List<SituacaoConjugalPais> listaSituacaoConjugalPaises() {
 		return situacaoConjugalPaisRepository.findAll();
 	}
 	
-	@GetMapping("/situacaoconjugalpais/{id}")
+	@GetMapping("/situacao-conjugal-pais/{id}")
 	public SituacaoConjugalPais listaSituacaoConjugalPaisUnica(@PathVariable(value="id") long id){
 		return situacaoConjugalPaisRepository.findById(id);
 	}
 	
-	@PostMapping("/situacaoconjugalpais")
+	@PostMapping("/situacao-conjugal-pais")
 	public SituacaoConjugalPais salvaSituacaoConjugalPais(@RequestBody SituacaoConjugalPais situacaoConjugalPais) {
 		return situacaoConjugalPaisRepository.save(situacaoConjugalPais);
 	}
 	
-	@DeleteMapping("/situacaoconjugalpais")
+	@DeleteMapping("/situacao-conjugal-pais")
 	public void deletaSituacaoConjugalPais(@RequestBody SituacaoConjugalPais situacaoConjugalPais) {
 		situacaoConjugalPaisRepository.delete(situacaoConjugalPais);
 	}
 	
-	@PutMapping("/situacaoconjugalpais")
+	@PutMapping("/situacao-conjugal-pais")
 	public SituacaoConjugalPais atualizaSituacaoConjugalPais(@RequestBody SituacaoConjugalPais situacaoConjugalPais) {
 		return situacaoConjugalPaisRepository.save(situacaoConjugalPais);
 	}
